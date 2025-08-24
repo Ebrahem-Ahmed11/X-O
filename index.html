@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner XO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #030712; /* Fallback */
+    background-image: 
+      radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+      radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+      radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+      radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    animation: stars-move 300s linear infinite;
+  }
+
+  @keyframes stars-move {
+    from { background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; }
+    to { background-position: -10000px 5000px, -10040px 5060px, -10130px 5270px, -10070px 5100px; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Custom Neon Glows */
+  .text-glow-cyan {
+    text-shadow: 0 0 5px #06b6d4, 0 0 8px #06b6d4;
+  }
+   .text-glow-fuchsia {
+    text-shadow: 0 0 5px #d946ef, 0 0 8px #d946ef;
+  }
+  
+  @keyframes pulse-glow-emerald {
+    0%, 100% {
+      box-shadow: 0 0 8px #10b981, 0 0 12px #10b981, 0 0 16px #10b981;
+    }
+    50% {
+       box-shadow: 0 0 16px #34d399, 0 0 24px #34d399, 0 0 32px #34d399;
+    }
+  }
+  .animate-pulse-glow-emerald {
+      animation: pulse-glow-emerald 2s infinite;
+  }
+</style>
+</head>
+  <body class="text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

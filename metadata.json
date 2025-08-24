@@ -1,0 +1,5 @@
+{
+  "name": "Spinner XO",
+  "description": "A fun application that combines a random player selector wheel (spinner) with a classic game of Tic-Tac-Toe (XO). Add players, spin the wheel to pick someone, and then challenge them to a game against a bot or another player. Player lists are saved locally for convenience.",
+  "requestFramePermissions": []
+}
